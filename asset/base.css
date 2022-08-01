@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Edu QLD Beginner', cursive;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    display:none;
+  }
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.column {
+    margin: auto 60px;
+}
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__column-2-4{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 30%;
+}
+.grid__column-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    display: flex;
+}
+@keyframes notifyGrow{
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes toleft{
+    from {
+        transform: translate(-110%)
+    }
+    to {
+        transform: translate(0px);
+    }
+}
+@keyframes toRight{
+    from {
+        transform: translateX(110%)
+    }
+    to {
+        transform: translate(0px);
+    }
+}
+@keyframes todown{
+    from {
+        transform: translateY(-110%)
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+@keyframes modalbox {
+    from {
+        transform: translateY(-280px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+.activeCurrentSong {
+    background-color: #ed6363 !important;
+    opacity: 1  !important;
+}
+.flex {
+    display: flex !important;
+}
+.open {
+    display: block !important;
+}
+.hide {
+    display: none !important;
+}
+.invisible {
+    color: transparent !important;
+}
+.animate {
+    position: relative;
+    animation: leftright 3s infinite alternate ease-in-out;
+
+}
+
+@keyframes leftright {
+  0%,
+  20% {
+    transform: translateX(0%);
+    left: 0%;
+  }
+  80%,
+  100% {
+    transform: translateX(-100%);
+    left: 100%;
+  }
+}
