@@ -24,7 +24,7 @@ function activePlay(){
 const web = {
     isPlaying: false,
     currentIndex: 0,
-    banhcam: [
+    allSong: [
         {
             name:'Chúng mình chấm dứt tình yêu đó ở đây, Hãy xem mọi lầm lỗi đều ở anh cả.',
             path: './asset/banhcam/Chúng mình chấm dứt tình yêu đó ở đây, Hãy xem mọi lầm lỗi đều ở anh cả..mp3',
@@ -296,6 +296,60 @@ const web = {
             image: './asset/img/list 5 -2.jpg',
             author: 'Bánh cam & stories',
         },
+        {
+            name:'Ai Xa Từ Phía Phố',
+            path:'./asset/HamletTruong/Ai Xa Từ Phía Phố.mp3',
+            image:'./asset/img/list 5 -2.jpg',
+            author:'Hamlet Trương'
+        },
+        {
+            name:'Cái Giá Của Trưởng Thành Là Cô Đơn',
+            path:'./asset/HamletTruong/Cái Giá Của Trưởng Thành Là Cô Đơn.mp3',
+            image:'./asset/img/list 5 -2.jpg',
+            author:'Hamlet Trương'
+        },
+        {
+            name:'Cảm Ơn Vì Đã Yêu',
+            path:'./asset/HamletTruong/Cảm Ơn Vì Đã Yêu.mp3',
+            image:'./asset/img/list 5 -2.jpg',
+            author:'Hamlet Trương'
+        },
+        {
+            name:'Cuộc Tình Là Đoạn Cuối Hoàng Hôn',
+            path:'./asset/HamletTruong/Cuộc Tình Là Đoạn Cuối Hoàng Hôn.mp3',
+            image:'./asset/img/list 5 -2.jpg',
+            author:'Hamlet Trương'
+        },
+        {
+            name:'Em thấy trong chúng ta một mùa hè',
+            path:'./asset/HamletTruong/Em thấy trong chúng ta một mùa hè.mp3',
+            image:'./asset/img/list 5 -2.jpg',
+            author:'Hamlet Trương'
+        },
+        {
+            name:'Đừng Làm Hoa Hướng Dương',
+            path:'./asset/HamletTruong/Đừng Làm Hoa Hướng Dương.mp3',
+            image:'./asset/img/list 5 -2.jpg',
+            author:'Hamlet Trương'
+        },
+        {
+            name:'Khi Tình Yêu Là Liều Thuốc Độ',
+            path:'./asset/HamletTruong/Khi Tình Yêu Là Liều Thuốc Độc.mp3',
+            image:'./asset/img/list 5 -2.jpg',
+            author:'Hamlet Trương'
+        },
+        {
+            name:'Ta Khát Chung Một Nụ Cười',
+            path:'./asset/HamletTruong/Ta Khát Chung Một Nụ Cười.mp3',
+            image:'./asset/img/list 5 -2.jpg',
+            author:'Hamlet Trương'
+        },
+        {
+            name:'Yêu Một Người Vô Tâm',
+            path:'./asset/HamletTruong/Yêu Một Người Vô Tâm.mp3',
+            image:'./asset/img/list 5 -2.jpg',
+            author:'Hamlet Trương'
+        },
     
     ],
     trends: [
@@ -326,55 +380,58 @@ const web = {
         }
     ],
     allList: [
-        {
+        {   
+            id: 'banhcam',
             name: 'Banhcam&Stories',
             image: './asset/img/plist 8.jpg'
         },
-        {
+        {   
+            id: 'hamlettruong',
             name: 'Hamlet Trương Radio',
             image: './asset/img/plist 5.jpg'
         },
-        {
+        {   id: 'Lofi Music',
             name: 'Lofi Music',
             image: './asset/img/plist 10.jpg'
         },
-        {
+        {   id: 'Short podcast',
             name: 'Short podcast',
             image: './asset/img/plist 9.jpg'
         },
-        {
+        {   id: 'Book',
             name: 'Books, hope and love!',
             image: './asset/img/plist 3.jpg"'
         },
     ],
-    
     render: function(){
         // Render list trending play audio
-        const htmls = this.trends.map(function( song, index){
+        const htmls = this.trends.map(function( song ){
             return `
                 <div class="grid__column-2-4">
-                <a class="list__play" href="">
-                    <img class="list__play--img" src= "${song.image}" alt="">
-                    <h4 class="list__play--name">${song.name}</h4>
-                </a>
+                    <a href="./asset/trending/trend.html" class="list__play">
+                        <img class="list__play--img" src= "${song.image}" alt="">
+                        <h4 class="list__play--name">${song.name}</h4>
+                    </a>
                 </div>
             `
         });
         trendList.innerHTML = htmls.join('');
         // ***************************************
+        // render ra tất cả play list
         const uiList = this.allList.map(function(song, index){
             return `
-            <div class="grid__column-2-4">
-                <a class="list__play" href="">
+            <div class="grid__column-2-4 list__play--active"  >
+                <div class="list__play " data-index="${index}">
                     <img class="list__play--img" src="${song.image}" alt="">
                     <h4 class="list__play--name reset__playlist--name">${song.name}</h4>
-                </a>
+                </div>
             </div>
             `
         });
         allListpart.innerHTML = uiList.join('');
         // **********************************************
-        const currentPlaylist = this.banhcam.map(function(song, index){
+        
+        const currentPlaylist = web.allSong.map(function(song, index){
             return `
             <div class="playList--item ${index === web.currentIndex ? 'activeCurrentSong' : ''}" data-index="${index}">
                 <img src="${song.image}" alt="">
@@ -390,7 +447,9 @@ const web = {
             </div>
             `
         });
-        $('.playList__board--body').innerHTML = currentPlaylist.join('')
+        
+        $('.playList__board--body').innerHTML = currentPlaylist.join('');
+        // Lắng nghe hành vi click chọn 1 Play list
     },
 
     handleEvent: function(){
@@ -446,25 +505,18 @@ const web = {
                     modal.onclick = function(){
                         $('.modal__box__option__login').classList.remove('open');
                         modal.classList.remove('open');
-
                     };
-                    
                 }
-                
             };
             modal.onclick = function(){
                 $('.modal__box__option__login').classList.remove('open');
                 modal.classList.remove('open');
-
             };
             $('.modal__box__option__login').addEventListener('click', function(event){
                 event.stopPropagation();
             });
-            
         }; 
         //  Xử lí trình phát nhạc
-        
-
         // Click Play-Btn
         playBtn.onclick = function(){
             if (web.isPlaying){
@@ -532,20 +584,46 @@ const web = {
             activePlay()
             
         };
+        // Hành vi tăng giảm âm lượng audio
         const volume = $('.volume');
-        volume.on = function(){
-            const currentVolume = audio.volume*100;
-            volume.value = currentVolume
+        audio.volume = volume.value / 100; 
+        volume.onchange = function(e){
+             
+            if (e.target.value > 0){
+                audio.volume = e.target.value / 100;
+                $('.fa-volume-low').classList.remove('hide');
+                $('.fa-volume-xmark').classList.add('hide')
+            }
+            else {
+                audio.volume = 0;
+                $('.fa-volume-low').classList.add('hide');
+                $('.fa-volume-xmark').classList.remove('hide')
+            } 
         };
+        // hành vi click vào icon âm lượng
+        const speaker = $('.custom--volume')
+        speaker.onclick = function(){
+            if(audio.volume = 0){
+                audio.volume = 1;
+                volume.value = 100;
+                $('.fa-volume-low').classList.remove('hide');
+                $('.fa-volume-xmark').classList.add('hide');
+            }else {
+                
+                audio.volume = 0;
+                volume.value = 0;
+                $('.fa-volume-low').classList.add('hide');
+                $('.fa-volume-xmark').classList.remove('hide')
+            }
+        }
         const listOpenBtn = $('.fa-list-check');
         listOpenBtn.onclick = function(){
-            $('.playList__board').classList.toggle('hide');
-          
+            $('.playList__board').classList.toggle('hide'); 
         };
         // Lắng nghe hành vi click vào playList
         $('.playList__board--body').onclick = function(e){
             const songNode = e.target.closest('.playList--item:not(.activeCurrentSong)');
-            if ( songNode || e.target.closest('playList--item--option')){
+            if ( songNode || e.target.closest('.playList--item--option')){
                 if (songNode){
                     web.currentIndex = Number(songNode.dataset.index)
                     web.loadCurrentSong();
@@ -557,41 +635,35 @@ const web = {
                 }
             }
         };
-        // Hành động click chọn album
-
-        
-        // Xử lí UI, khi mở list thì thanh cuộn tổng sẽ được ẩn đi
-
-        
     },
     // định nghĩa bài hát từ list Banh cam
     defineProperties: function(){
         Object.defineProperty(this,'currentSong', {
             get: function(){
-                return this.banhcam[this.currentIndex]
-            }
-        })
+                    return web.allSong[web.currentIndex]
+                }               
+            })
     },
     // thực hiện việc lấy tên bài hát, tác giả và src của bài hát và render ra UI
     loadCurrentSong: function(){
-        $('.play__board--about__song--name').textContent = this.currentSong.name;
+        $('.play__board--about__song--name').textContent = web.currentSong.name;
         audio.src = this.currentSong.path;
-        $('.play__board--about__song--author').textContent = this.currentSong.author;
+        $('.play__board--about__song--author').textContent = web.currentSong.author;
     },
     nextSong: function(){
-        web.currentIndex++;
-        if(web.currentIndex > web.banhcam.length) {
-            web.currentIndex = 0;
-            
-        }
-        web.loadCurrentSong();
+            web.currentIndex++;
+            if(web.currentIndex > web.allSong.length) {
+                web.currentIndex = 0;   
+                web.loadCurrentSong();          
+            }        
     },
     preSong: function(){
-        --web.currentIndex;
-        if(web.currentIndex < 0) {
-            web.currentIndex = web.banhcam.length - 1;
+            --web.currentIndex;
+            if(web.currentIndex < 0) {
+                web.currentIndex = web.allSong.length - 1;
+                web.loadCurrentSong();
         }
-        web.loadCurrentSong();
+        
     },
     scrollActiveSong: function(){
         const theSongPlay = $('.activeCurrentSong')
@@ -609,7 +681,7 @@ const web = {
         this.handleEvent();
         this.render();
         this.defineProperties();
-        this.loadCurrentSong();
+        this.loadCurrentSong();  
     }
 }
 

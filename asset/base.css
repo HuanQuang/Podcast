@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
     margin-right: -15px;
 }
 .column {
-    margin: auto 60px;
+    margin: auto 10%;
 }
 .grid {
     width: 1200px;
@@ -76,6 +76,15 @@ body::-webkit-scrollbar {
     }
     to {
         transform: translateY(0px);
+    }
+}
+@keyframes logo {
+    from {
+        right: 680px;
+    }
+    to {
+        right: -500px;
+
     }
 }
 .activeCurrentSong {
