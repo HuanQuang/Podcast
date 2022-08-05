@@ -653,16 +653,17 @@ const web = {
     nextSong: function(){
             web.currentIndex++;
             if(web.currentIndex > web.allSong.length) {
-                web.currentIndex = 0;   
-                web.loadCurrentSong();          
-            }        
+                web.currentIndex = 0;        
+            }  
+          web.loadCurrentSong();   
     },
     preSong: function(){
             --web.currentIndex;
             if(web.currentIndex < 0) {
                 web.currentIndex = web.allSong.length - 1;
-                web.loadCurrentSong();
+                
         }
+        web.loadCurrentSong();
         
     },
     scrollActiveSong: function(){
