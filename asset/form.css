@@ -1,0 +1,75 @@
+.main {
+    background-color: #f1f1f1;
+}
+.form {
+    font-family: cursive;
+    display: none;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    width: 30%;
+    margin: 5% 35%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.4);
+}
+.header {
+    text-align: center;
+    margin: 10px 0;
+    opacity: 0.8;
+    font-size: 2rem;
+}
+.slogan {
+    text-align: center;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+}
+.form--group {
+    font-size: 1.7rem;
+    margin-bottom: 10px;    
+}
+.form--label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    opacity: 0.9;
+
+}
+.input--form {
+    width: 100%;
+    margin-bottom: 2px;
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 4px;
+    border: 1px solid #aaa6;
+    outline: none;
+    font-size: 1.3rem;
+}
+.input--form:hover {
+    border-color: aqua;
+}
+.invalid .input--form {
+    border-color: red;
+}
+.form--message {
+    font-size: 1.4rem;
+    color: red;
+    
+}
+.submitBtn {
+    background-color: #1dbfaf;
+    border-radius: 4px;
+    width: 100%;
+    border: none;
+    height: 34px;
+    color: aliceblue;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-top: 15px;
+}
+.submitBtn:hover {
+    background-color: #20cab9;
+    cursor: pointer;
+}

@@ -432,6 +432,8 @@ const web = {
         // **********************************************
         
         const currentPlaylist = web.allSong.map(function(song, index){
+        console.log(song.name.length)
+
             return `
             <div class="playList--item ${index === web.currentIndex ? 'activeCurrentSong' : ''}" data-index="${index}">
                 <img src="${song.image}" alt="">
@@ -447,7 +449,6 @@ const web = {
             </div>
             `
         });
-        
         $('.playList__board--body').innerHTML = currentPlaylist.join('');
         // Lắng nghe hành vi click chọn 1 Play list
     },
@@ -499,20 +500,20 @@ const web = {
                 
             });
             $('.Btn--ghibli').onclick = function(){
-                $('.modal__box__option__login').classList.add('open');
-                const isOpenLogin = $('.modal__box__option__login').classList.contains('open');
+                $('.form').classList.add('open');
+                const isOpenLogin = $('.form').classList.contains('open');
                 if (isOpenLogin) {
                     modal.onclick = function(){
-                        $('.modal__box__option__login').classList.remove('open');
+                        $('.form').classList.remove('open');
                         modal.classList.remove('open');
                     };
                 }
             };
             modal.onclick = function(){
-                $('.modal__box__option__login').classList.remove('open');
+                $('.form').classList.remove('open');
                 modal.classList.remove('open');
             };
-            $('.modal__box__option__login').addEventListener('click', function(event){
+            $('.form').addEventListener('click', function(event){
                 event.stopPropagation();
             });
         }; 
@@ -602,7 +603,7 @@ const web = {
         };
         // hành vi click vào icon âm lượng
         const speaker = $('.custom--volume')
-        speaker.onclick = function(){
+        speaker.onchange = function(){
             if(audio.volume = 0){
                 audio.volume = 1;
                 volume.value = 100;
@@ -654,15 +655,17 @@ const web = {
             web.currentIndex++;
             if(web.currentIndex > web.allSong.length) {
                 web.currentIndex = 0;   
-                web.loadCurrentSong();          
-            }        
+            }  
+            web.loadCurrentSong();      
+                         
     },
     preSong: function(){
             --web.currentIndex;
             if(web.currentIndex < 0) {
                 web.currentIndex = web.allSong.length - 1;
-                web.loadCurrentSong();
         }
+        web.loadCurrentSong();
+
         
     },
     scrollActiveSong: function(){

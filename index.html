@@ -8,6 +8,7 @@
     <title>Podcast Music</title>
     <link rel="stylesheet" href="./asset/main.css">
     <link rel="stylesheet" href="./asset/base.css">
+    <link rel="stylesheet" href="./asset/form.css">
     <link rel="stylesheet" href="./asset/font/fontawesome-free-6.1.1-web/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,7 +92,7 @@
                 <div class="column">
                     <div id="header__release" class="header__release">
                         <div class="header__release--img">
-                            <img src="./asset/img/header.jpg" alt="">
+                            <img src="./asset/img/book.jpg" alt="">
                         </div>
                         <div class="header__release--intro">
                             <div class="header__release--intro__title">
@@ -101,7 +102,7 @@
                                 </p>
                             </div>
                             <p class="header__release--intro--discribe">"RADIO Podcast" là nơi sẻ chia cảm xúc cùng những người trẻ mỗi khi họ cần tâm sự, được thực hiện bởi ME Team. Chúng mình hy vọng "RADIO Podcast" sẽ trở thành điểm dừng chân bình yên cho bạn.</p>
-                            <a href="./asset/trending/trend.html">Read more</a>
+                            <a class="modal__box__option__login--img" href="./asset/trending/trend.html">Read more</a>
                             <div class="header__release--intro--connect">
                                 <button class="header__release--intro--connect--buy--btn">
                                     STREAM / BUY
@@ -172,9 +173,10 @@
                 <div class="conten__exciting--if__background">
                     <div class="conten__exciting--main--if">
                         <h3 class="conten__exciting--main__title">
-                            LO - FI
+                            MONG BẠN DỊU DÀNG VỚI CHÍNH MÌNH
                         </h3>
-                        <P class="conten__exciting--main--if__content">Lo-fi là một thể loại nhạc trong đó có chứa các yếu tố không hoàn hảo trong quá trình ghi âm và trình diễn. Tiêu chuẩn chất lượng âm thanh (hay fidelity) sự sản xuất âm nhạc được cải thiện qua nhiều thập kỉ, trong khi nhiều nhạc lo-fi cũ đã không được công nhận. Lo-fi được công nhận là một trong các thể loại nhạc nổi tiếng vào những năm 1990, khi nó đã thay thế nhạc DIY...</P>
+                        <P class="conten__exciting--main--if__content">"Đừng bao giờ dựa dẫm vào một ai, bởi vì người đó sẽ trở thành thói quen của bạn. Nếu như phân ly, thứ mà bạn mất sẽ không phải chỉ là một người, mà là cả chỗ dựa tinh thần.
+                            Cho nên, bất luận là ở đâu, lúc nào, hãy học cách bước đi một mình, nó sẽ khiến bạn càng bước càng thản nhiên hơn."</P>
                         <button class="conten__exciting--main--btn">Read more...</button>
                     </div>
                     
@@ -312,34 +314,31 @@
                 </div>
                 
             </div>
-            <div class="modal__box__option__login">
-                <div class="modal__box__option__login--img">
-                    <img src="./asset/img/ghibli.png" alt="">
+            <form action="" class="form" id="form-1">
+                <h3 class="header">RADIO Podcast</h3>
+                <p class="slogan">Nghe nhạc và những Podcast miễn phí ❤️</p>
+                <div class="form--group">
+                    <label for="" class="form--label">Tên đầy đủ</label>
+                    <input id="fullname" class="input--form" type="text" placeholder="Vd: Quang Huấn">
+                    <span class="form--message"></span>
+                </div>  
+                <div class="form--group">
+                    <label for="" class="form--label">Email</label>
+                    <input id="email" class="input--form" type="email" placeholder="Vd: quanghuank63@gmail.com">
+                    <span class="form--message"></span>
                 </div>
-                <div class="modal__box__option__login--box">
-                    <label for="">Username or Email Address</label>
-                    <input class="modal__box__option__login--input" type="text" autofocus>
-                    <label for="">Password</label>
-                    <input class="modal__box__option__login--input" type="password">
-                    <div class="modal__box__option__login--checkbox">
-                        <input type="checkbox">
-                        <label for="">
-                            Remember Me
-                        </label>
-                    </div>
-                    <button class="modal__box__option__login--Btn">Login</button>
+                <div class="form--group">
+                    <label for="" class="form--label">Mật khẩu</label>
+                    <input id="password" class="input--form" type="password" placeholder="Nhập mật khẩu">
+                    <span class="form--message"></span>
                 </div>
-                <a href="" class="modal__box__option__suggess">
-                    Register | Lost your password?
-                </a>
-                <a href="" class="modal__box__option__suggess modal--active">
-                    <i class="fa-solid fa-arrow-left-long"></i>
-                    Go to Podcast Radio
-                </a>
-                <a href="" class="modal__box__option__policy">
-                    Privacy Policy
-                </a>
-            </div>
+                <div class="form--group">
+                    <label for="" class="form--label">Nhập lại mật khẩu</label>
+                    <input id="rePassword" class="input--form" type="password" placeholder="Nhập lại mật khẩu">
+                    <span class="form--message"></span>
+                </div>
+                <button class="submitBtn">Đăng ký</button>
+            </form>
         </div>
 
         <!-- Play board -->
@@ -352,9 +351,7 @@
                     <p class="play__board--about__song--author">
                     </p>
                 </div>
-                <div class="play__board--about--add">
-                    <i class="fa-solid fa-circle-plus"></i>
-                </div> 
+                
             </div>
             <div class="play__board__control">
                 <div class="play__board__control--Btn">
@@ -404,5 +401,24 @@
         </div>
     </div>
     <script src="./asset/main.js"></script>
+    <script src="./asset/form.js"></script>
+    <script>
+        Validator({
+    form: '#form-1',
+    errorSelector: '.form--message',
+    formGroupSelector: '.form--group',
+    rules: [
+        Validator.isRequired('#fullname'),
+        Validator.isEmail('#email'),
+        Validator.isPassword('#password'),
+        Validator.isrePassword('#rePassword', function(){
+            return document.getElementById('password').value
+        }),
+    ],
+    onsubmit: function(data){
+        return data;
+    }
+})
+    </script>
 </body>
 </html>
