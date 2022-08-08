@@ -8,13 +8,15 @@
     position: absolute;
     top: 0;
     width: 30%;
+    min-width: 400px;
     margin: 5% 35%;
     background-color: white;
     padding: 25px;
     border-radius: 2px;
     box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.4);
+    animation:  notifyGrow 0.3s ease-in;
 }
-.header {
+.form__header {
     text-align: center;
     margin: 10px 0;
     opacity: 0.8;

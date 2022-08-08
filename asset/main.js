@@ -665,8 +665,6 @@ const web = {
                 web.currentIndex = web.allSong.length - 1;
         }
         web.loadCurrentSong();
-
-        
     },
     scrollActiveSong: function(){
         const theSongPlay = $('.activeCurrentSong')
@@ -678,7 +676,6 @@ const web = {
         },100)
         
     },
-
 // xử lí các hành động UI
     start: function(){
         this.handleEvent();

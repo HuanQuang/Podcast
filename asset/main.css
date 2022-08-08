@@ -347,6 +347,7 @@
     color: #ffffff;
     font-size: 1.8rem;
     cursor: pointer;
+    line-height: 2rem;
 }
 .list__play--name:hover {
     opacity: 0.8;
@@ -641,70 +642,6 @@
 }
 .Btn--ghibli {
     background-color: #171717;
-}
-.modal__box__option__login {
-    width: 60%;
-    background-color: #f0f0f1;
-    position: absolute ;
-    margin: 15% auto;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.4);
-    animation: notifyGrow ease 0.25s;
-    display: none;
-    border-radius: 4px;
-    top: 0;
-}
-.modal__box__option__login--box {
-    background-color: #ffffff;
-    padding: 15px 35px;
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 15px 0;
-    border: 1px solid rgba(128, 128, 128, 0.397);
-    text-align: left;
-}
-.modal__box__option__login--input {
-    margin: 5px 0 10px; 
-    padding: 5px 10px;
-    border-radius: 4px;
-    outline: none;
-}
-.modal__box__option__login--input:hover {
-    border-color:  #34c368;
-}
-.modal__box__option__login--checkbox {
-    display: flex;
-    margin-bottom: 10px;
-}
-.modal__box__option__login--Btn {
-    background-color: #1dbfaf;
-    border-radius: 4px;
-    color: aliceblue;
-    border: none;
-    padding: 8px 10px;
-}
-.modal__box__option__login--Btn:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-.modal__box__option__suggess {
-    padding: 5px 0;
-    font-weight: 700;
-    display: block;
-    font-size: 1.5rem;
-    color: #171717;
-    text-decoration: none;
-    text-align: left;
-    width: fit-content;
-
-}
-.modal__box__option__policy {
-    font-size: 1.3rem;
-    font-family: monospace;
-}
-.modal--active {
-    margin-bottom: 30px;
 }
 /* Play board */
 .play__board {
