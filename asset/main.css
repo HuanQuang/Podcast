@@ -347,7 +347,7 @@
     color: #ffffff;
     font-size: 1.8rem;
     cursor: pointer;
-    line-height: 2rem;
+    line-height: 2.5rem;
 }
 .list__play--name:hover {
     opacity: 0.8;
@@ -411,14 +411,6 @@
     font-size: 1.7rem;
     font-style: italic;
     line-height: 2.2rem;
-}
-.conten__exciting--main--btn {
-    margin: 30px 0;
-    background-color: transparent;
-    border-radius: 25px;
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    padding: 5px 10px;
 }
 .conten__exciting--main--btn:hover {
     cursor: pointer;
@@ -562,6 +554,14 @@
 }
 .content__feedback__homepage--input:hover {
     border-color: aqua;
+}
+.content__feedback--submit {
+    width: 90px;
+    height: 30px;
+    margin: 10px 0;
+}
+.content__feedback--submit i {
+    font-size: 2rem;
 }
 /* Footer */
 #footer {

@@ -140,6 +140,24 @@
     height: 310px;
     margin: 10px 0 20px;
 }
+.cd--rotate {
+    animation: rotate 6s  linear infinite;
+}
+.cd-pause {
+    animation-play-state:paused
+}
+@keyframes rotate {
+    from {
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+    }
+    to {
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+    }
+}
 .cd__thumb__control {
     display: flex;
     font-size: 2.4rem;
@@ -148,6 +166,11 @@
 .cd__thumb__control > i {
     line-height: 4rem;
     cursor: pointer;
+    padding: 0 8px;
+    border-radius: 25px;
+}
+.cd__thumb__control > i:hover {
+    background-color: #ec7b35;
 }
 .control--off {
     display: none !important;
@@ -155,6 +178,7 @@
 .control--asset {
     display: flex;
     cursor: pointer;
+    font-size: 4rem;
 }
 .list--render {
     width: 100%;

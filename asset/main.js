@@ -432,8 +432,6 @@ const web = {
         // **********************************************
         
         const currentPlaylist = web.allSong.map(function(song, index){
-        console.log(song.name.length)
-
             return `
             <div class="playList--item ${index === web.currentIndex ? 'activeCurrentSong' : ''}" data-index="${index}">
                 <img src="${song.image}" alt="">
@@ -649,6 +647,7 @@ const web = {
     loadCurrentSong: function(){
         $('.play__board--about__song--name').textContent = web.currentSong.name;
         audio.src = this.currentSong.path;
+        console.log(this.currentSong.path)
         $('.play__board--about__song--author').textContent = web.currentSong.author;
     },
     nextSong: function(){
