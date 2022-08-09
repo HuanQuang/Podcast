@@ -51,6 +51,41 @@ const trendPage = {
     ],
     musics: [
         {
+            name: 'Câu hứa chưa trọn vẹn',
+            path: './Music/CauHuaChuaVenTron-PhatHuyT4-7093319.mp3',
+            image: './img/câu hứa chưa trọn vẹn.jpg',
+            author: 'PhatHuyT4',
+            duration: '4:31'
+        },
+        {
+            name: 'Đoạn tuyệt nàng đi',
+            path: './Music/DoanTuyetNangDiLofiVersion-PhatHuyT4KProx-7011827.mp3',
+            image: './img/câu hứa chưa trọn vẹn.jpg',
+            author: 'PhatHuyT4',
+            duration: '3:52'
+        },
+        {
+            name: 'Cố giang tình',
+            path: './Music/CoGiangTinh-X2X-6257264.mp3',
+            image: './img/cố giang tình.jpg',
+            author: 'Phát Hồ',
+            duration: '3:56'
+        },
+        {
+            name: 'Cô thắm không về',
+            path: './Music/CoThamKhongVe-PhatHoJokesBiiThien-6067247.mp3',
+            image: './img/cô thăm không về.jpg',
+            author: 'Phát Hồ, Jokes, BiiThien',
+            duration: '4:05'
+        },
+        {
+            name: 'Anh không tha thứ',
+            path: './Music/AnhKhongThaThu-DinhDung-6684271.mp3',
+            image: './img/anh không tha thứ.jpg',
+            author: 'Đình Dũng',
+            duration: '4:34'
+        },
+        {
             name: '3107LofiVersion',
             path: './Music/3107LofiVersion-WnNauDuongg-6943942.mp3',
             image: './img/3107.jpg',
