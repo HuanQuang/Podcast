@@ -49,7 +49,6 @@
     background-color: #000000c2;
     display: none;
     animation: toleft ease-in 0.3s;
-    transition: 1s;
 }
 .header__nav__search--place {
     margin: 25px 49px;
@@ -809,6 +808,7 @@
     margin-top: 64px;
 }
 .playList--item {
+    max-height: 56px;
     display: flex;
     padding: 8px;
     border-radius: 10px;
@@ -822,6 +822,7 @@
 }
 .playList--item img {
     width: 40px;
+    max-height: 40px;
     border-radius: 10px;
 
 }

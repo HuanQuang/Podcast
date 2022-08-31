@@ -481,6 +481,7 @@ const web = {
         // // Nhấn search thì bảng tìm kiếm hiện ra
         searchBtn.onclick = function(){
             $('.header__nav__search').classList.add('flex');
+            $('.header__nav__search--place').focus()
             const isOpenSearch = $('.header__nav__search').classList.contains('flex');
             if(isOpenSearch) {
                 $('.header__nav__search--closeBtn').onclick = function(){

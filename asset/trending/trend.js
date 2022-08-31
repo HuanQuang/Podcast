@@ -348,7 +348,10 @@ const trendPage = {
                     audio.pause();
                     $('.pause--icon').classList.add('hide');
                     $('.play--icon').classList.remove('hide');
-                    $('.cd__thumb--img').classList.add('cd-pause')
+                    setTimeout(() => {
+                        $('.cd__thumb--img').classList.add('cd-pause')
+                    }, 500);
+                   
                 } else {
                     trendPage.isPlaying = true;
                     audio.play();
